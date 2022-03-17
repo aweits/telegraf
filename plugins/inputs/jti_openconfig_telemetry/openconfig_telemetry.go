@@ -43,7 +43,7 @@ type OpenConfigTelemetry struct {
 
 var (
 	// Regex to match and extract data points from path value in received key
-	keyPathRegex = regexp.MustCompile(`/([^/]*)\[([A-Za-z0-9\-/]*=[^\[]*)]`)
+	keyPathRegex = regexp.MustCompile(`/([^/]*)\[([A-Za-z0-9\-\_/]*=[^\[]*)]`)
 	sampleConfig = `
   ## List of device addresses to collect telemetry from
   servers = ["localhost:1883"]
